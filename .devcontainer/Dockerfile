@@ -4,10 +4,28 @@ RUN cue version
 
 RUN curl -sLS https://get.arkade.dev | sh
 
-ark get flux
-ark get jq
-ark get yq
-ark get sops
-ark get kustomize
-ark get kyverno
-ark get terraform
+RUN arkade get --quiet cosign \
+  dagger \
+  flux \
+  gh \
+  gomplate \
+  helm \
+  hey \
+  istioctl \
+  jq \
+  ktop \
+  kube-linter \
+  kubectl \
+  kubeval \
+  kustomize \
+  kyverno \
+  terraform \
+  terragrunt \
+  terrascan \
+  tfsec \
+  timoni \
+  trivy \
+  sops \
+  vault \
+  vcluster \
+  yq
